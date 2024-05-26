@@ -1,0 +1,304 @@
+@import url(https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap);
+
+:root {
+  --white-color: #ffffff;
+  --bg-img: url(images/top-bg.png);
+  --shadow: 0px 35px 50px -15px #c2c3d680;
+  --border-bottom: 1px solid #e3e4f1;
+  --list-item-color: #494c6b;
+  --header-bg: #fafafa;
+  --form-bg: #ffffff;
+  --input-color: #9495a5;
+  --svg-border-color: #e3e4f1;
+  --complated-color: #d1d2da;
+  --active-color: #3a7cfd;
+}
+
+.dark-mode {
+  --bg-img: url(images/dark-bg.png);
+  --header-bg: #171823;
+  --form-bg: #25273d;
+  --svg-border-color: #393a4b;
+  --border-bottom: 1px solid #393a4b;
+  --list-item-color: #c8cbe7;
+  --shadow: 0px 35px 50px -15px #00000080;
+  --complated-color: #4d5067;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.2s;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+  background-color: blue;
+}
+
+header {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  background-color: var(--header-bg);
+  padding-bottom: 100px;
+}
+.header-top {
+  height: 300px;
+  background: var(--bg-img);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 70px;
+}
+
+.header-title {
+  width: 100%;
+  max-width: 541px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.header-title h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 15px;
+  color: var(--white-color);
+}
+
+.header-title button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.header-title button:active {
+  transform: translateY(1px);
+}
+
+.header-title button svg {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  position: relative;
+  width: 100%;
+  max-width: 540px;
+  height: auto;
+  min-height: 388px;
+  margin: auto;
+  margin-top: -120px;
+  background-color: var(--form-bg);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  padding-bottom: 50px;
+}
+
+.form-bottom {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 24px;
+  position: absolute;
+  bottom: 0px;
+  border-top: var(--border-bottom);
+}
+
+.items {
+  font-family: Josefin Sans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: -0.1944444477558136px;
+  color: var(--input-color);
+}
+
+.form-bottom div {
+  display: flex;
+  gap: 18px;
+}
+
+.form-bottom div button {
+  font-family: Josefin Sans;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: -0.1944444477558136px;
+  color: var(--input-color);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.clear {
+  font-family: Josefin Sans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: -0.1944444477558136px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--input-color);
+}
+
+.input-wrapper {
+  width: 100%;
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: var(--border-bottom);
+}
+
+.textInput {
+  width: 70%;
+  height: 100%;
+  padding-left: 72px;
+  font-family: Josefin Sans;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.25px;
+  border: none;
+  outline: none;
+  border-top-left-radius: 10px;
+  background: var(--form-bg);
+  color: var(--input-color);
+}
+
+.add-btn {
+  background-color: #0095ff;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  box-shadow: rgba(255, 255, 255, 0.4) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", "Liberation Sans",
+    sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.15385;
+  margin: 0;
+  outline: none;
+  padding: 8px 0.8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+  margin-right: 72px;
+}
+
+.add-btn:hover,
+.add-btn:focus {
+  background-color: #07c;
+}
+
+.add-btn:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, 0.15);
+}
+
+.add-btn:active {
+  background-color: #0064bd;
+  box-shadow: none;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  font-family: Josefin Sans;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.25px;
+  color: var(--list-item-color);
+  padding: 20px 0px;
+  border-bottom: var(--border-bottom);
+  cursor: pointer;
+  overflow: auto;
+}
+
+.list-item svg {
+  margin: 0px 24px;
+}
+.list-item svg circle {
+  stroke: var(--svg-border-color);
+}
+
+.list-item button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.list-item button svg {
+  width: 24px;
+  height: 24px;
+  margin: 0px;
+}
+.list-item button svg path {
+  fill: var(--list-item-color);
+}
+
+.list-item button:nth-child(2) {
+  margin-left: auto;
+}
+.list-item button:nth-child(3) {
+  margin: 0px 25px;
+}
+
+.complated {
+  text-decoration: line-through;
+  color: var(--complated-color);
+}
+
+.active-color {
+  color: var(--active-color) !important;
+}
+
+@media screen and (max-width: 600px) {
+  form {
+    max-width: 90%;
+    margin-top: -150px;
+  }
+  .header-title {
+    padding: 0px 30px;
+  }
+  .textInput {
+    padding-left: 18px;
+  }
+  .add-btn {
+    margin-right: 30px;
+  }
+  .list-item svg {
+    margin: 0px 12px;
+  }
+  .header-top {
+    padding-top: 50px;
+  }
+}
